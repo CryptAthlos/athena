@@ -1,3 +1,13 @@
+# Athena
+
+Copyright (c) 2017-2018 The Athena Project.
+
+Portions Copyright (c) 2017-2018 The CryptAthlos developers.
+
+Portions Copyright (c) 2014-2017 The Monero Project.
+
+Portions Copyright (c) 2012-2013 The Cryptonote developers.
+
 This is the reference code for [CryptAthlos](https://cryptathlos.io) cryptocurrency protocol.
 
 * Launch your own CryptAthlos currency: [CryptAthlos Starter](https://cryptathlosstarter.io/)
@@ -175,6 +185,10 @@ Example:
 const char GENESIS_COINBASE_TX_HEX[] = "";
 ```
 
+Build:
+```
+$ make
+```
 
 **2. Start the daemon to print out the genesis block**
 
@@ -182,7 +196,8 @@ Run your daemon with `--print-genesis-tx` argument. It will print out the genesi
 
 Example:
 ```
-furiouscoind --print-genesis-tx
+$ cd build/release/src
+$ ./olympuscoind --print-genesis-tx
 ```
 
 
@@ -218,24 +233,23 @@ To build, change to a directory where this file is located, and run `make`. The 
 
 **Advanced options:**
 
-* Parallel build: run `make -j<number of threads>` instead of `make`.
-* Debug build: run `make build-debug`.
-* Test suite: run `make test-release` to run tests in addition to building. Running `make test-debug` will do the same to the debug version.
+* Parallel build:
+```
+$ make -j<number of threads>
+```
+
+* Debug build:
+```
+$ make build-debug
+```
+
+* Test suite or Test with debug:
+```
+$ make test-release
+```
+
+```
+$ make test-debug
+```
+
 * Building with Clang: it may be possible to use Clang instead of GCC, but this may not work everywhere. To build, run `export CC=clang CXX=clang++` before running `make`.
-
-### On Windows
-Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, and Boost 1.55. You may download them from:
-
-* http://www.microsoft.com/
-* http://www.cmake.org/
-* http://www.boost.org/
-
-To build, change to a directory where this file is located, and run theas commands: 
-```
-mkdir build
-cd build
-cmake -G "Visual Studio 12 Win64" ..
-```
-
-And then do Build.
-Good luck!
