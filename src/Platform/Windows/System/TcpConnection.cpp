@@ -80,7 +80,7 @@ size_t TcpConnection::read(uint8_t* data, size_t size) {
   WSABUF buf{static_cast<ULONG>(size), reinterpret_cast<char*>(data)};
   DWORD flags = 0;
   TcpConnectionContext context;
-  context.hEvent = NULL;
+  Context.hEvent = NULL;
   if (WSARecv(connection, &buf, 1, NULL, &flags, &context, NULL) != 0) {
     int lastError = WSAGetLastError();
     if (lastError != WSA_IO_PENDING) {
@@ -149,7 +149,7 @@ size_t TcpConnection::write(const uint8_t* data, size_t size) {
 
   WSABUF buf{static_cast<ULONG>(size), reinterpret_cast<char*>(const_cast<uint8_t*>(data))};
   TcpConnectionContext context;
-  context.hEvent = NULL;
+  Context.hEvent = NULL;
   if (WSASend(connection, &buf, 1, NULL, 0, &context, NULL) != 0) {
     int lastError = WSAGetLastError();
     if (lastError != WSA_IO_PENDING) {
