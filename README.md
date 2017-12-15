@@ -1,8 +1,8 @@
-This is the reference code for [CryptAthlos](https://cryptathlos.org) cryptocurrency protocol.
+This is the reference code for [CryptAthlos](https://cryptathlos.io) cryptocurrency protocol.
 
-* Launch your own CryptAthlos currency: [CryptAthlos Starter](https://cryptathlosstarter.org/)
-* CryptAthlos reference implementation: [CryptAthlosCoin](https://cryptathlos-coin.org)
-* Discussion board and support: [CryptAthlos Forum](https://forum.cryptathlos.org)
+* Launch your own CryptAthlos currency: [CryptAthlos Starter](https://cryptathlosstarter.io/)
+* CryptAthlos reference implementation: [CryptAthlosCoin](https://cryptathlos-coin.io)
+* Discussion board and support: [CryptAthlos Forum](https://forum.cryptathlos.io)
 
 ## CryptAthlos forking how-to
 
@@ -29,7 +29,7 @@ const char CRYPTATHLOS_NAME[] = "olympuscoin";
 
 **2. in src/CMakeList.txt file** - set_property(TARGET daemon PROPERTY OUTPUT_NAME "YOURCOINNAME**d**")
 
-Example: 
+Example:
 ```
 set_property(TARGET daemon PROPERTY OUTPUT_NAME "olympuscoind")
 ```
@@ -156,7 +156,7 @@ const size_t CRYPTATHLOS_BLOCK_GRANTED_FULL_REWARD_ZONE = 20000;
 
 ### Fifth step. Address prefix
 
-You may choose a letter (in some cases several letters) all the coin's public addresses will start with. It is defined by `CRYPTATHLOS_PUBLIC_ADDRESS_BASE58_PREFIX` constant. Since the rules for address prefixes are nontrivial you may use the [prefix generator tool](https://cryptathlosstarter.org/tools.html).
+You may choose a letter (in some cases several letters) all the coin's public addresses will start with. It is defined by `CRYPTATHLOS_PUBLIC_ADDRESS_BASE58_PREFIX` constant. Since the rules for address prefixes are nontrivial you may use the [prefix generator tool](https://cryptathlosstarter.io/tools.html).
 
 Example:
 ```
