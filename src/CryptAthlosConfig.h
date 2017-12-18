@@ -13,7 +13,7 @@ namespace parameters {
 const uint64_t CRYPTATHLOS_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTATHLOS_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTATHLOS_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTATHLOS_PUBLIC_ADDRESS_BASE58_PREFIX       = ;
+const uint64_t CRYPTATHLOS_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x18845cfca; // starts with "athena"
 const size_t   CRYPTATHLOS_MINED_MONEY_UNLOCK_WINDOW          = 60;
 const uint64_t CRYPTATHLOS_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
@@ -62,8 +62,8 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 } // parameters
 
 //TODO Put here the name of your currency
-const char     CRYPTATHLOS_NAME[]                            = "";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     CRYPTATHLOS_NAME[]                            = "athena";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001ffffffffffff01029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101c25bce8d7d9b1e454ef971e32ae0f69fdabd4a6904d307d752d07f1e0f69143f";
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
 const uint8_t  BLOCK_MINOR_VERSION_0                         =  0;
@@ -72,8 +72,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              = ;
-const int      RPC_DEFAULT_PORT                              = ;
+const int      P2P_DEFAULT_PORT                              = 18845;
+const int      RPC_DEFAULT_PORT                              = 18846;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -92,8 +92,7 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
-  "",
-  "",
+  "45.55.253.141:18845"
 };
 
 struct CheckpointData {
