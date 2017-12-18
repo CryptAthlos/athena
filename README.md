@@ -84,7 +84,7 @@ $ make
 ```
 * The resulting executables can be found in:
 ```
-build/release/bin
+~/athena/build/release/src
 ```
 
 * Add
