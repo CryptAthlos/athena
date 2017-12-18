@@ -89,7 +89,7 @@ $ make
 
 * Add
 ```
-PATH="$PATH:$HOME/athena/build/release/bin"
+PATH="$PATH:$HOME/athena/build/release/src"
 ```
 to
 ```
